@@ -1,19 +1,9 @@
 {
-    "restartable": "rs",
-    "ignore": [
-      ".git",
-      "node_modules/**/node_modules"
-    ],
-    "verbose": true,
-    "execMap": {
-        "js": "node --harmony"
-    },
-    "watch": [
-      "server/",
-      "db/"
-    ],
-    "env": {
-      "NODE_ENV": "development"
-    },
-    "ext": "js json sql"
-  }
+	"restartable": "rs",
+	"ignore": [".git", "node_modules/**/node_modules"],
+	"watch": ["server.js", "db/"],
+	"env": {
+		"NODE_ENV": "development"
+	},
+	"ext": "js json sql"
+}
