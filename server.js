@@ -21,9 +21,12 @@ mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: tr
 
 // express
 let app = express();
+app.use(express.static('public'))
+app.use(express.json())
 app.use(express.urlencoded({extended: false}));
 
 // routes
+// CRUD for READ
 app.get('/', function(req, res) {
     db.collection('items').find().toArray(function (err, items) {
         res.send(`
@@ -63,18 +66,25 @@ app.get('/', function(req, res) {
 
             </div>
 
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script src='/browser.js'></script>
             </body>
             </html>
         `)
     })
 });
 
-// CREATE - CRUD
+// CRUD for CREATE
 app.post('/create-item', function (req, res) {
     // select the database collection
     db.collection('items').insertOne({text: req.body.item}, function () {
         res.redirect('/')
     });
 });
+
+app.post('/update-item', function (req, res) {
+    console.log(req.body.text);
+    res.send('success')
+})
 
 // start server
