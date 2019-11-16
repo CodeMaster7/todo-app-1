@@ -43,15 +43,15 @@ app.get('/', function(req, res) {
                 <h1 class="display-4 text-center py-1">To-Do App</h1>
 
                 <div class="jumbotron p-3 shadow-sm">
-                <form action='/create-item' method='post'>
+                <form id='create-form' action='/create-item' method='post'>
                     <div class="d-flex align-items-center">
-                    <input name='item' autofocus autocomplete="off" class="form-control mr-3" type="text" style="flex: 1;">
+                    <input id='create-field' name='item' autofocus autocomplete="off" class="form-control mr-3" type="text" style="flex: 1;">
                     <button class="btn btn-primary">Add New Item</button>
                     </div>
                 </form>
                 </div>
 
-                <ul class="list-group pb-5">
+                <ul id='item-list' class="list-group pb-5">
                     ${items.map(function (item) {
                         return `
                         <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
@@ -77,8 +77,8 @@ app.get('/', function(req, res) {
 // CRUD for CREATE
 app.post('/create-item', function (req, res) {
     // select the database collection
-    db.collection('items').insertOne({text: req.body.item}, function () {
-        res.redirect('/')
+    db.collection('items').insertOne({text: req.body.text}, function (err, info) {
+        res.json(info.ops[0])
     });
 });
 
