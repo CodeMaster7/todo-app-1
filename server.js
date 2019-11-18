@@ -2,9 +2,11 @@ require('dotenv').config();
 
 // depandencies
 const express = require('express'),
-      mongodb = require('mongodb');
+      mongodb = require('mongodb'),
+      sanitizeHTML = require('sanitize-html');
 
 const {
+    PASSWORD,
     CONNECTION_STRING,
     SERVER_PORT
 } = process.env;
@@ -24,6 +26,22 @@ let app = express();
 app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({extended: false}));
+// tells express to use our function for all routes,
+// its going to be added on to all our URL routes as the first function to run
+app.use(passwordProtected)
+
+// SECURITY
+function passwordProtected(req, res, next) {
+    res.set('WWW-Authenticate', 'Basic realm="Simple Todo App"')
+
+    console.log(req.headers.authorization);
+
+    if (req.headers.authorization == PASSWORD) {
+        next()
+    } else {
+        res.status(401).send('Authentication required')
+    }
+}
 
 // routes
 // CRUD for READ
@@ -52,7 +70,7 @@ app.get('/', function(req, res) {
                 </div>
 
                 <ul id='item-list' class="list-group pb-5">
-                    
+
                 </ul>
 
             </div>
@@ -71,18 +89,22 @@ app.get('/', function(req, res) {
 
 // CRUD for CREATE
 app.post('/create-item', function (req, res) {
+    // 1st argument a is for the text or input you want to clean up
+    // 2nd argument is an object of what we dont have to allow, so empty array = not allow any html tags
+    let safeText = sanitizeHTML(req.body.text, {allowedTags: [], allowedAttributes: {}})
     // select the database collection
-    db.collection('items').insertOne({text: req.body.text}, function (err, info) {
+    db.collection('items').insertOne({text: safeText}, function (err, info) {
         res.json(info.ops[0])
     });
 });
 
 app.post('/update-item', function (req, res) {
+     let safeText = sanitizeHTML(req.body.text, {allowedTags: [], allowedAttributes: {}})
     // parameters inside the findOneAndUpdate method
     // a - which document we want ot update
     // b - what we want to update on that document
     // c - include a function that gets called once this database action is complete
-    db.collection('items').findOneAndUpdate({_id: new mongodb.ObjectId(req.body.id)}, {$set: {text: req.body.text}}, function () {
+    db.collection('items').findOneAndUpdate({_id: new mongodb.ObjectId(req.body.id)}, {$set: {text: safeText}}, function () {
         res.send('Success')
     })
 })
