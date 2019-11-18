@@ -11,6 +11,11 @@ const {
     SERVER_PORT
 } = process.env;
 
+let port = process.env.PORT
+if (port == null || port == '') {
+    port = SERVER_PORT
+}
+
 // connect to mongoDB
 let db
 let connectionString = CONNECTION_STRING;
@@ -18,7 +23,7 @@ let connectionString = CONNECTION_STRING;
 mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true}, function (err, client) {
     db = client.db();
     // dont let db run until its done then run server
-    app.listen(SERVER_PORT);
+    app.listen(port);
 })
 
 // express
