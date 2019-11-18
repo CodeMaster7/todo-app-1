@@ -19,6 +19,7 @@ if (port == null || port == '') {
 
 // connect to mongoDB
 let db
+console.log(db);
 let connectionString = CONNECTION_STRING;
 
 mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true}, function (err, client) {
@@ -34,7 +35,6 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}));
 // tells express to use our function for all routes,
 // its going to be added on to all our URL routes as the first function to run
-app.use(passwordProtected)
 
 // SECURITY
 function passwordProtected(req, res, next) {
@@ -48,6 +48,7 @@ function passwordProtected(req, res, next) {
         res.status(401).send('Authentication required')
     }
 }
+app.use(passwordProtected)
 
 // routes
 // CRUD for READ
