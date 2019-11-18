@@ -11,6 +11,7 @@ const {
     SERVER_PORT
 } = process.env;
 
+//add this change for heroku and change port in the app.listen inside the mongodb.connect
 let port = process.env.PORT
 if (port == null || port == '') {
     port = SERVER_PORT
