@@ -39,9 +39,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Full Stack Simple Todo app][product-screenshot]](https://udemy-brad-schiff-todo-app1.herokuapp.com/?target=_blank)
+[![Full Stack Simple Todo app][product-screenshot]](https://udemy-brad-schiff-todo-app1.herokuapp.com){:target="_blank"}
 
-Full Stack todo app that is part of [Udemy - Learn JavaScript: Full-Stack from Scratch](https://www.udemy.com/course/learn-javascript-full-stack-from-scratch/).
+Full Stack todo app that is part of [Udemy - Learn JavaScript: Full-Stack from Scratch](https://www.udemy.com/course/learn-javascript-full-stack-from-scratch).
 
 <!-- **It works with both the on-screen and physical keyboard.** -->
 
