@@ -73,7 +73,7 @@ git clone https://github.com/CodeMaster7/todo-app-1.git
 <!-- CHANGES MADE -->
 ## Changes Made
 
-The original project files were provided by [Udemy - Learn JavaScript: Full-Stack from Scratch](https://www.udemy.com/course/learn-javascript-full-stack-from-scratch/?target=_blank). I've made the following changes to make it more unique and suit my personality and style.
+The original project files were provided by [Udemy - Learn JavaScript: Full-Stack from Scratch](https://www.udemy.com/course/learn-javascript-full-stack-from-scratch). I've made the following changes to make it more unique and suit my personality and style.
 
 - Some JavaScript functionality
 
@@ -101,7 +101,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Sam Bonfanti - [LinkedIn](https://www.linkedin.com/in/sambonfanti/?target=_blank)
+Sam Bonfanti - [LinkedIn](https://www.linkedin.com/in/sambonfanti)
 
 Project Link: [https://github.com/CodeMaster7/todo-app-1](https://github.com/CodeMaster7/todo-app-1)
 
@@ -109,7 +109,7 @@ Project Link: [https://github.com/CodeMaster7/todo-app-1](https://github.com/Cod
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [Udemy - Learn JavaScript: Full-Stack from Scratch](https://www.udemy.com/course/learn-javascript-full-stack-from-scratch/learn/lecture/14678102#questions/7992844/?target=_blank)
+* [Udemy - Learn JavaScript: Full-Stack from Scratch](https://www.udemy.com/course/learn-javascript-full-stack-from-scratch/learn/lecture/14678102#questions/7992844)
 * [GitHub Pages](https://pages.github.com)
 
 
@@ -117,7 +117,7 @@ Project Link: [https://github.com/CodeMaster7/todo-app-1](https://github.com/Cod
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [license-shield]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
-[license-url]: https://choosealicense.com/licenses/mit/?target=_blank
+[license-url]: https://choosealicense.com/licenses/mit/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/sambonfanti/?target=_blank
-[product-screenshot]: https://i.postimg.cc/Y2XTDNry/full-stack-todo.jpg?target=_blank
+[linkedin-url]: https://www.linkedin.com/in/sambonfanti
+[product-screenshot]: https://i.postimg.cc/Y2XTDNry/full-stack-todo.jpg
