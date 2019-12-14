@@ -60,13 +60,34 @@ Full Stack todo app that is part of [Udemy - Learn JavaScript: Full-Stack from S
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps:
+To get a local copy of the project up and running, follow these simple steps:
 
 1. Clone the repo
 ```sh
 git clone https://github.com/CodeMaster7/todo-app-1.git
 ```
-2. Enjoy! It's that simple :smile:
+2. Install Node packages
+```sh
+npm install
+```
+3. Add `.env` to your main folder and these values inside`.env` file
+```sh
+CONNECTION_STRING=
+SERVER_PORT=
+PASSWORD=
+```
+4. Move to project folder & start node server
+```sh
+nodemon
+```
+5. add user and password
+```sh
+learn
+```
+```sh
+javascript
+```
+5. Enjoy, it's that simple! :smile:
 
 
 

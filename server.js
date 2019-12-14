@@ -48,6 +48,7 @@ function passwordProtected(req, res, next) {
         res.status(401).send('Authentication required')
     }
 }
+// add function to to all routes
 app.use(passwordProtected)
 
 // routes
