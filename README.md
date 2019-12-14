@@ -70,11 +70,11 @@ git clone https://github.com/CodeMaster7/todo-app-1.git
 ```sh
 npm install
 ```
-3. Add `.env` to your main folder and these values inside`.env` file
+3. Add `.env` to your main folder. Then add these inside`.env` file with your own values (exept for the password value);
 ```sh
 CONNECTION_STRING=
 SERVER_PORT=
-PASSWORD=
+PASSWORD=Basic bGVhcm46amF2YXNjcmlwdA==
 ```
 4. Move to project folder & start node server
 ```sh
