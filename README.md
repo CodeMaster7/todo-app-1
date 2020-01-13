@@ -141,4 +141,4 @@ Project Link: [https://github.com/CodeMaster7/todo-app-1](https://github.com/Cod
 [license-url]: https://choosealicense.com/licenses/mit/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/sambonfanti
-[product-screenshot]: https://i.postimg.cc/Y2XTDNry/full-stack-todo.jpg
+[product-screenshot]: https://i.postimg.cc/HxwQ84c5/full-stack-todo.jpg
