@@ -36,11 +36,10 @@ app.use(express.urlencoded({extended: false}));
 // tells express to use our function for all routes,
 // its going to be added on to all our URL routes as the first function to run
 
+
 // SECURITY
 function passwordProtected(req, res, next) {
     res.set('WWW-Authenticate', 'Basic realm="Simple Todo App"')
-
-    console.log(req.headers.authorization);
 
     if (req.headers.authorization == PASSWORD) {
         next()
